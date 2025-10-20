@@ -233,7 +233,7 @@ class InvoiceResource extends Resource
                     Action::make('printV1')
                         ->label('Cetak v1')
                         ->tooltip('Cetak v1')
-                        // ->url(fn(Invoice $record) => route('invoice.pdf', $record))
+                        ->url(fn(Invoice $record) => route('invoice.pdf', $record))
                         ->openUrlInNewTab(),
 
                     Action::make('printV2')
@@ -242,7 +242,7 @@ class InvoiceResource extends Resource
                         // ->button()
                         // ->color('success')
                         // ->icon('heroicon-o-printer')
-                        // ->url(fn(Invoice $record) => route('invoice.pdf2', $record))
+                        ->url(fn(Invoice $record) => route('invoice.pdf2', $record))
                         ->openUrlInNewTab(),
                 ])->button()
                     ->label('Cetak')
